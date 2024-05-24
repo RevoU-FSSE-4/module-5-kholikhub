@@ -55,10 +55,8 @@ export interface PokemonTypes{
   type: string;
 }
 
-export interface PokemonEvo{
+export interface IPokemonList{
+  id: string;
   name: string;
-  species: string;
   img: string;
-  type: string;
-  types: string;
 }

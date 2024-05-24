@@ -90,27 +90,20 @@ export default function About () {
         {!pokemonChosen ? (
           <h1>Please chose a Pokemon</h1>
         ) : (
-          <div className="card">
+          <div className=" p-10 text-center bg-blue-400 border-solid border-2 border-sky-500 rounded">
             <h1 className=" uppercase">{pokemon.name}</h1>
-            <img src={pokemon.img} className=" w-40" />
-            <div>
-              <button 
-              onClick={() => {
-                router.push(`/pokemon-detail/${pokemon.id}`);
-              }}
-              className=" hover:bg-black mb-2 border-2 bg-blue-700 rounded-xl text-xl p-1 text-white"
-              >
-                Evolution
-              </button>
+            <img src={pokemon.img} className=" h-40 w-40" />
+            <div className="">
+
+              <h3>Species: {pokemon.species}</h3>
+              <h3>Type: {pokemon.type}</h3>
+              <h4>HP: {pokemon.hp}</h4>
+              <h4>Attack: {pokemon.attack}</h4>
+              <h4>Defence: {pokemon.defence}</h4>
+              <h4>Special Attack: {pokemon.spAttack}</h4>
+              <h4>Special Defence: {pokemon.spDefence}</h4>
+              <h4>Speed: {pokemon.speed}</h4>
             </div>
-            <h3>Species: {pokemon.species}</h3>
-            <h3>Type: {pokemon.type}</h3>
-            <h4>HP: {pokemon.hp}</h4>
-            <h4>Attack: {pokemon.attack}</h4>
-            <h4>Defence: {pokemon.defence}</h4>
-            <h4>Special Attack: {pokemon.spAttack}</h4>
-            <h4>Special Defence: {pokemon.spDefence}</h4>
-            <h4>Speed: {pokemon.speed}</h4>
           </div>
         )}
       </div>      

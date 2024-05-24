@@ -1,9 +1,11 @@
 import { useRouter } from 'next/navigation'
 import NavigationGlobal from "../Components/NavigationGlobal"
 import FooterComponent from "../Components/FooterComponent";
+// import PokemonListComponent from "../Components/PokemonListComponent";
 
 
 function Home() {
+
 
   const router = useRouter()
   return (
@@ -21,7 +23,7 @@ function Home() {
             <button
               className=" text-white border-2 m-10 p-2 bg-rose-500 hover:bg-sky-400" 
               onClick={() => {
-              router.push("/FormLogin");
+              router.push("/login/formLogin");
               }}
               >
               Login
@@ -29,13 +31,14 @@ function Home() {
             <button 
               className=" text-white border-2 m-10 p-2 bg-rose-500 hover:bg-sky-400"
               onClick={() => {
-              router.push("/Register");
+              router.push("/login/register");
               }}
             >
               Register
             </button>
           </div>
         </div>
+
         <div>
             <FooterComponent/>
         </div>
